@@ -43,20 +43,20 @@ trimmer = trim_messages(
 
 
 # ---------------------------------------------------------------------
-# 5) Build chain: prompt -> trimmer -> LLM -> parser
+# 5) Build chain: prompt -> trimmer -> LLM
 # ---------------------------------------------------------------------
 
 # TODO: combine prompt, trimmer, and llm
-# TODO: add StrOutputParser at the end
 # chain = ...
 
-
 # ---------------------------------------------------------------------
-# 6) Wrap the chain with message history
+# 6) Wrap the chain with message history and add output parser
 # ---------------------------------------------------------------------
 
-# TODO:
-# chatbot = RunnableWithMessageHistory(...)
+# TODO: wrap the chain with message history
+# chain_with_history = RunnableWithMessageHistory(...)
+# TODO: add StrOutputParser at the end
+# chatbot =
 
 # ---------------------------------------------------------------------
 # 7) CLI loop
@@ -67,6 +67,7 @@ def main():
     print("Type '/exit' to quit. Type '/reset' to clear memory.\n")
 
     # TODO: choose a domain interactively or hardcode it
+    # TODO: (additional task) add domain validation by the LLM
     domain = input("Choose your domain (e.g., 'SQL tutor', 'NLP revision', 'Cloud security'): ").strip()
     if not domain:
         domain = "General"
