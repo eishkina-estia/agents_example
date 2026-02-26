@@ -32,7 +32,7 @@ chain_with_history = RunnableWithMessageHistory(
     input_messages_key = "query", history_messages_key = "history")
 
 DEFAULT_SESSION_ID = "default"
-DEFAULT_CONFIG = config={"configurable": {"session_id": DEFAULT_SESSION_ID}}
+DEFAULT_CONFIG = {"configurable": {"session_id": DEFAULT_SESSION_ID}}
 
 ai_message = chain_with_history.invoke({"query": "Hi, my name is Bob!"}, config=DEFAULT_CONFIG)
 print("Assistant (with memory):", ai_message.content)
