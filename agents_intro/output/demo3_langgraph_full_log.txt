@@ -1,0 +1,109 @@
+---------------------------------------------------------------------
+QUERY 1: Define self-attention and give the key paper + year.
+----- TOOL CALL -----
+nlp_concept_kb_lookup({'term': 'self-attention'})
+----- TOOL RESULT BEGIN -----
+{"definition": "An attention mechanism where each token attends to all tokens in the same sequence.", "key_paper": "Attention Is All You Need", "year": 2017, "keywords": ["query", "key", "value", "attention weights"], "category": "attention mechanism"}
+----- TOOL RESULT END -----
+----- LANGGRAPH AGENT -----
+Self-attention is an attention mechanism where each token attends to all tokens in the same sequence. The key paper is "Attention Is All You Need" by Vaswani et al., published in 2017. This paper introduced self-attention as a crucial component of the Transformer architecture, which has since become a widely used model for natural language processing tasks.
+---------------------------------------------------------------------
+QUERY 2: What is a Transformer? Also, summarize it in one sentence for Master's students.
+----- TOOL CALL -----
+wikipedia_search({'query': 'Transformer (machine learning)'})
+----- TOOL RESULT BEGIN -----
+Page: Trap lnsformer (deep learning)
+Summary: In deeearning, the transformer is an artificial neural network architecture based on the multi-head attention mechanism, in which text is converted to numerical representations called tokens, and each token is converted into a vector via lookup from a word embedding table. At each layer, each token is then contextualized within the scope of the context window with other (unmasked) tokens via a parallel multi-head attention mechanism, allowing the signal for key tokens to be amplified and less important tokens to be diminished.
+Transformers have the advantage of having no recurrent units, therefore requiring less training time than earlier recurrent neural architectures (RNNs) such as long short-term memory (LSTM). Later variations have been widely adopted for training large language models (LLMs) on large (language) datasets.
+
+The modern version of the transformer was proposed in the 2017 paper "Attention Is All You Need" by researchers at Google. The predecessors of transformers were developed as an improvement over previous architectures for machine translation, but have found many applications since. They are used in large-scale natural language processing, computer vision (vision transformers), reinforcement learning, audio, multimodal learning, robotics, and playing chess. It has also led to the development of pre-trained systems, such as generative pre-trained transformers (GPTs) and BERT (bidirectional encoder representations from transformers).
+
+Page: Mamba (deep learning architecture)
+Summary: Mamba is a deep learning architecture focused on sequence modeling. It was developed by two researchers Albert Gu from Carnegie Mellon University and Tri Dao from Princeton University to address some limitations of transformer models, especially in processing long sequences, and it is based on the Structured State Space sequence (S4) model.
+
+Page: Vision transformer
+Summary: A vision transformer (ViT) is a transformer designed for computer vision. A ViT decomposes an input image into a series of patches (rather than text into tokens), serializes each patch into a vector, and maps it to a smaller dimension with a single matrix multiplication. These vector embeddings are then processed by a transformer encoder as if they were token embeddings.
+ViTs were designed as alternatives to convolutional neural networks (CNNs) in computer vision applications. They have different inductive biases, training stability, and data efficiency. Compared to CNNs, ViTs are less data efficient, but have higher capacity. Some of the largest modern computer vision models are ViTs, such as one with 22B parameters.
+Subsequent to its publication, many variants were proposed, with hybrid architectures with both features of ViTs and CNNs. ViTs have found application in image recognition, image segmentation, weather prediction, and autonomous driving.
+
+
+----- TOOL RESULT END -----
+----- TOOL CALL -----
+nlp_concept_kb_lookup({'term': 'transformer'})
+----- TOOL RESULT BEGIN -----
+{"definition": "A neural architecture built around self-attention for sequence modeling.", "key_paper": "Attention Is All You Need", "year": 2017, "keywords": ["self-attention", "encoder-decoder", "parallelization"], "category": "sequence modeling architecture"}
+----- TOOL RESULT END -----
+----- LANGGRAPH AGENT -----
+For Master's students, a Transformer is a neural network architecture that uses self-attention mechanisms to process sequential data, such as text or images, in parallel and efficiently.
+---------------------------------------------------------------------
+QUERY 3: Who introduced the Transformer architecture? Use Wikipedia for context, and the NLP knowledge base for metadata.
+----- TOOL CALL -----
+wikipedia_search({'query': 'Transformer architecture introduction'})
+----- TOOL RESULT BEGIN -----
+Page: Transformer (deep learning)
+Summary: In deep learning, the transformer is an artificial neural network architecture based on the multi-head attention mechanism, in which text is converted to numerical representations called tokens, and each token is converted into a vector via lookup from a word embedding table. At each layer, each token is then contextualized within the scope of the context window with other (unmasked) tokens via a parallel multi-head attention mechanism, allowing the signal for key tokens to be amplified and less important tokens to be diminished. 
+Transformers have the advantage of having no recurrent units, therefore requiring less training time than earlier recurrent neural architectures (RNNs) such as long short-term memory (LSTM). Later variations have been widely adopted for training large language models (LLMs) on large (language) datasets.
+
+The modern version of the transformer was proposed in the 2017 paper "Attention Is All You Need" by researchers at Google. The predecessors of transformers were developed as an improvement over previous architectures for machine translation, but have found many applications since. They are used in large-scale natural language processing, computer vision (vision transformers), reinforcement learning, audio, multimodal learning, robotics, and playing chess. It has also led to the development of pre-trained systems, such as generative pre-trained transformers (GPTs) and BERT (bidirectional encoder representations from transformers).
+
+Page: Attention Is All You Need
+Summary: "Attention Is All You Need" is a 2017 research paper in machine learning authored by eight scientists working at Google. The paper introduced a new deep learning architecture known as the transformer, based on the attention mechanism proposed in 2014 by Bahdanau et al. The transformer approach it describes has become the main architecture of a wide variety of AI, such as large language models. At the time, the focus of the research was on improving Seq2seq techniques for machine translation, but the authors go further in the paper, foreseeing the technique's potential for other tasks like question answering and what is now known as multimodal generative AI.
+Some early examples that the team tried their Transformer architecture on included English-to-German translation, generating Wikipedia articles on "The Transformer", and parsing. These convinced the team that the Transformer is a general-purpose language model, and not just good for translation.
+As of 2025, the paper has been cited more than 173,000 times, placing it among the top ten most-cited papers of the 21st century. After the paper was published by Google, each of the authors left the company to join other companies or to found startups.
+
+Page: Residual neural network
+Summary: A residual neural network (also referred to as a residual network or ResNet) is a deep learning architecture in which the layers learn residual functions with reference to the layer inputs. It was developed in 2015 for image recognition, and won the ImageNet Large Scale Visual Recognition Challenge (ILSVRC) of that year.
+As a point of terminology, "residual connection" refers to the specific architectural motif of 
+  
+    
+      
+        x
+        ↦
+        f
+        (
+        x
+        )
+        +
+        x
+      
+    
+    {\displaystyle x\mapsto f(x)+x}
+  
+, where 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is an arbitrary neural network module. The motif had been used previously (see §History for details). However, the publication of ResNet made it widely popular for feedforward networks, appearing in neural networks that are seemingly unrelated to ResNet.
+The residual connection stabilizes the training and convergence of deep neural networks with hundreds of layers, and is a common motif in deep neural networks, such as transformer models (e.g., BERT, and GPT models such as ChatGPT), the AlphaGo Zero system, the AlphaStar system, and t
+----- TOOL RESULT END -----
+----- TOOL CALL -----
+nlp_concept_kb_lookup({'term': 'transformer architecture'})
+----- TOOL RESULT BEGIN -----
+{"error": "concept not found."}
+----- TOOL RESULT END -----
+----- LANGGRAPH AGENT -----
+The Transformer architecture was introduced by researchers at Google in their 2017 paper "Attention Is All You Need". This paper proposed a new deep learning architecture based on the attention mechanism, which has since become a widely used approach in natural language processing and other areas of artificial intelligence. The Transformer architecture has been shown to be effective for tasks such as machine translation, question answering, and text generation, and has led to the development of pre-trained systems like BERT and GPT.
+---------------------------------------------------------------------
+QUERY 4: Explain BPE briefly and give its key paper and year.
+----- TOOL CALL -----
+nlp_concept_kb_lookup({'term': 'BPE'})
+----- TOOL RESULT BEGIN -----
+{"error": "concept not found."}
+----- TOOL RESULT END -----
+----- LANGGRAPH AGENT -----
+It seems that the NLP concept KB Lookup tool was unable to find information on BPE. Can you please provide a short clarification or more context about BPE? Is it related to Byte Pair Encoding?
+
+Assuming it's indeed related, I can try again:
+
+Byte Pair Encoding (BPE) is an algorithm used in sequence-to-sequence models, such as machine translation and text summarization, to optimize vocabulary and reduce the number of parameters.
+
+The key paper on BPE is "Neural Machine Translation of Rare Words with Subword Units" by Sennrich et al. (2015).
+---------------------------------------------------------------------
+QUERY 5: What's the best pizza place in Paris?
+----- LANGGRAPH AGENT -----
+The question is out of scope. I can help with NLP concepts (Transformer, attention, tokenization, BERT, etc.). Please rephrase your question within that scope.
